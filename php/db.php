@@ -14,7 +14,7 @@
     if($rowCount>0){
       $info = mysql_fetch_array($data);
       $clean_timestamp = filter_var($_POST['timestamp'],FILTER_SANITIZE_NUMBER_INT);
-      $sql = "UPDATE theGame SET timestamp = '{$clean_timestamp}' WHERE email = {$clean_email}";
+      $sql = "UPDATE theGame SET timestamp = '{$clean_timestamp}' WHERE email = '{$clean_email}'";
       mysql_query($sql) or die("Error - query 2 failed: {$sql}");
       echo $info['timestamp'];
     }else{
