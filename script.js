@@ -21,6 +21,7 @@ $('button').on('click',function(){
   })
   .done(function( resp ) {
     response = JSON.parse(resp);
+    console.log(response);
     if(response.status==="Success"){
       var now = Date.now();
       var diff = now - response.timestamp;
