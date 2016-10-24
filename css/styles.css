@@ -1,0 +1,13 @@
+.v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poiret One', cursive;
+}
+.v-pad{
+  margin:2em 0;
+}
+
+.hidden_screen{
+  display:none;
+}
