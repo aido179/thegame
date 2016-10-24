@@ -27,7 +27,7 @@ $('button').on('click',function(){
       var days = Math.floor(diff / 1000 / 60 / 60 / 24);
       $("#score").text(days);
       $(".screen").hide();
-      $("#results_screen").show();
+      $("#success_screen").show();
     }else if(response.status==="Not Found"){
       //show not found message
       $(".screen").hide();
