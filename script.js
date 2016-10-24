@@ -20,9 +20,23 @@ $('button').on('click',function(){
     }
   })
   .done(function( resp ) {
-    $(".screen").hide();
-    $("#results_screen").show();
-    console.log(resp);
+    response = JSON.parse(resp);
+    if(response.status==="Success"){
+      var now = Date.now();
+      var diff = now - response.timestamp;
+      var days = Math.floor(diff / 1000 / 60 / 60 / 24);
+      $("#score").text(days);
+      $(".screen").hide();
+      $("#results_screen").show();
+    }else if(response.status==="Not Found"){
+      //show not found message
+      $(".screen").hide();
+      $("#notfound_screen").show();
+    } else if(response.status==="Error"){
+      //show Error
+      $(".screen").hide();
+      $("#error_screen").show();
+    }
   });
 
 });

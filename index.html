@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/loading.css">
-    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Poiret+One" rel="stylesheet">
   </head>
   <body class="v-center">
     <!--
@@ -39,9 +39,9 @@
       </div>
     </div>
     <!--
-    This is the results screen.
+    This is the success screen.
     -->
-    <div id="results_screen" class="screen hidden_screen row">
+    <div id="success_screen" class="screen hidden_screen row">
       <div class="col-md-4 col-md-offset-4 panel panel-default text-center">
         <div class="v-pad">
           <img src="img/money.png" onload="this.width/=2;">
@@ -49,7 +49,37 @@
           <img src="img/trophy.png" onload="this.width/=2;">
         </div>
         <h1>Congratulations!</h1>
-        <h2>You've lasted X days.</h2>
+        <h2>You've lasted <span id="score">X</span> days.</h2>
+      </div>
+    </div>
+
+    <!--
+    This is the not found screen.
+    -->
+    <div id="notfound_screen" class="screen hidden row">
+      <div class="col-md-4 col-md-offset-4 panel panel-default text-center">
+        <div class="v-pad">
+          <img src="img/ticket.png" onload="this.width/=2;">
+        </div>
+        <h1>Welcome!</h1>
+        <h2>We couldn't find your email.</h2>
+        <p class="v-pad">But don't worry! We added it to the list, so the next time you lose
+          the game, you can get your score.</p>
+        <p class="v-pad">Good luck!</p>
+      </div>
+    </div>
+    <!--
+    This is the Error screen.
+    -->
+    <div id="error_screen" class="screen hidden row">
+      <div class="col-md-4 col-md-offset-4 panel panel-default text-center">
+        <div class="v-pad">
+          <img src="img/confused.png" onload="this.width/=2;">
+        </div>
+        <h1>Oops!</h1>
+        <h2>Something went wrong.</h2>
+        <p class="v-pad">I don't really know what to say.</p>
+        <p class="v-pad">Sorry, I suppose!</p>
       </div>
     </div>
 

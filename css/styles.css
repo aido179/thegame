@@ -11,3 +11,9 @@
 .hidden_screen{
   display:none;
 }
+
+p{
+  font-family: 'Catamaran', sans-serif;
+  font-size:1.5em;
+  line-height: 1.2em;
+}
