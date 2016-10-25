@@ -19,6 +19,9 @@
       $t = $info['timestamp'];
       echo '{"status":"Success","timestamp":"'.$t.'"}';
     }else{
+      $clean_timestamp = filter_var($_POST['timestamp'],FILTER_SANITIZE_NUMBER_INT);
+      $sql = "INSERT INTO theGame (email, timestamp) VALUES ('{$clean_email}', '{$clean_timestamp}')";
+      $data = mysql_query($sql) or die('{"status":"Error","message":"query 3 failed"}');
       echo '{"status":"Not Found","message":"The email was not found."}';
     }
 
