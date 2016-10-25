@@ -20,7 +20,24 @@
         <h1>Lost The Game?</h1>
         <h2>I feel you.</h2>
         <input type="text" id="email-input" class="form-control v-pad" placeholder="email@address.com">
-        <button type="button" class="btn btn-primary btn-lg btn-block v-pad">Get My Score</button>
+        <button type="button" id="email-btn" class="btn btn-primary btn-lg btn-block v-pad">Get My Score</button>
+      </div>
+    </div>
+
+    <!--
+    This is the verification screen.
+    -->
+    <div id="verification_screen" class="screen row">
+      <div class="col-md-4 col-md-offset-4 panel panel-default text-center">
+        <div class="v-pad">
+          <img src="img/ball.png" onload="this.width/=2;">
+          <img src="img/sad.png" onload="this.width/=2;">
+          <img src="img/trophy.png" onload="this.width/=2;">
+        </div>
+        <h1>Verify your email!</h1>
+        <h2>Check your inbox.</h2>
+        <input type="text" id="code-input" class="form-control v-pad" placeholder="0000">
+        <button type="button" id="code-btn" class="btn btn-primary btn-lg btn-block v-pad">Verify</button>
       </div>
     </div>
 
@@ -66,6 +83,20 @@
         <p class="v-pad">But don't worry! We added it to the list, so the next time you lose
           the game, you can get your score.</p>
         <p class="v-pad">Good luck!</p>
+      </div>
+    </div>
+    <!--
+    This is the not verified screen.
+    -->
+    <div id="notverified_screen" class="screen hidden_screen row">
+      <div class="col-md-4 col-md-offset-4 panel panel-default text-center">
+        <div class="v-pad">
+          <img src="img/ticket.png" onload="this.width/=2;">
+        </div>
+        <h1>Oops!</h1>
+        <h2>We couldn't verify your email.</h2>
+        <p class="v-pad">Maybe you typed in the code wrong?</p>
+        <p class="v-pad"><a href="http://game.poo.today">Try again!</a></p>
       </div>
     </div>
     <!--

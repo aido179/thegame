@@ -1,10 +1,12 @@
 <?php
   //connect to DB
   include_once 'connect.php';
+
   connectToRelativeDB();
 
 
   $original_email = $_POST['email'];
+  $original_email = str_replace(' ', '', $original_email);
   $clean_email = filter_var($original_email,FILTER_SANITIZE_EMAIL);
   if ($original_email == $clean_email && filter_var($original_email,FILTER_VALIDATE_EMAIL)){
     // now we know the original email was safe to insert.
