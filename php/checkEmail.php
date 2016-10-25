@@ -9,7 +9,7 @@
   if ($original_email == $clean_email && filter_var($original_email,FILTER_VALIDATE_EMAIL)){
     // now we know the original email was safe to use.
     $sql = "SELECT * FROM theGame WHERE email = '{$clean_email}'";
-    $data = mysql_query($sql) or die('{"status":"Error","message":"query 4 failed"}');
+    $data = mysql_query($sql) or die('{"status":"Error","message":"query 4 failed:'.$sql.'"}');
     $rowCount = mysql_num_rows($data);
     if($rowCount>0){
       $sendgrid = new SendGrid("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");
