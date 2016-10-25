@@ -1,5 +1,5 @@
 <?php
-  require 'vendor/autoload.php';
+  require '../vendor/autoload.php';
   //connect to DB
   include_once 'connect.php';
 
